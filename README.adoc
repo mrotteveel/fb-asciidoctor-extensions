@@ -1,0 +1,65 @@
+= Asciidoctor Extensions for Firebird Documentation
+
+This is a collection of Asciidoctor extensions for use in https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual].
+
+Code in this project is licensed under the https://www.firebirdsql.org/en/initial-developer-s-public-license-version-1-0/[Initial Developer's Public License] (IDPL), a derivative of the Mozilla Public License 1.1 (MPL-1.1).
+
+== Available extensions
+
+[NOTE]
+====
+These extensions haven't been published yet, so their names and coordinates are tentative.
+
+Actually usage in Firebird documentation and Jaybird manual is pending publication of these extensions.
+====
+
+These extensions are registered automatically.
+
+=== `canonical-link`
+
+Adds a canonical-link to HTML output, using the URL specified in document attribute `fb-canonical-html`.
+
+For example, for a document with:
+
+[source,asciidoc]
+----
+= Title
+:fb-canonical-html: https://example.org/canonical.html
+
+Body
+----
+
+This processor will add the following HTML fragment to the `<head>` element of the generated document:
+
+[source,html]
+----
+<link rel="canonical" href="https://example.org/canonical.html"/>
+----
+
+.Maven coordinates
+[source,xml]
+----
+<dependency>
+  <groupId>org.firebirdsql.asciidoctor</groupId>
+  <artifactId>canonical-link</artifactId>
+  <version>1.0</version>
+</dependency>
+----
+
+//(Used in: https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
+
+=== `since-until-macro`
+
+Converts `++since:[Jaybird 6]++` to `++[.since]_**Since:** Jaybird 6_++` (example rendering: [.since]_**Since:** Jaybird 6_)
+
+.Maven coordinates
+[source,xml]
+----
+<dependency>
+  <groupId>org.firebirdsql.asciidoctor</groupId>
+  <artifactId>since-until-macro</artifactId>
+  <version>1.0</version>
+</dependency>
+----
+
+// (Used in: https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
