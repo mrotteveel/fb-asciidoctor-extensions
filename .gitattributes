@@ -1,0 +1,14 @@
+* text=auto
+
+*.css           text
+*.java          text
+*.properties    text
+*.sh            text
+*.txt           text
+*.xml           text
+*.toml          text
+*.bat           text    eol=crlf
+
+*.jar           binary
+
+gradlew         text    eol=lf
