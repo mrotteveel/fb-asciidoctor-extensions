@@ -64,4 +64,4 @@ Provides two macros:
 </dependency>
 ----
 
- (Used in: the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
+(Used in: the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
