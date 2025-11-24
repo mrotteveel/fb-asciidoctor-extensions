@@ -2,7 +2,9 @@
 
 This is a collection of AsciidoctorJ extensions for use in https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual].
 
-Code in this project is licensed under the https://www.firebirdsql.org/en/initial-developer-s-public-license-version-1-0/[Initial Developer's Public License] (IDPL), a derivative of the Mozilla Public License 1.1 (MPL-1.1).
+Code in this project is licensed under the https://www.firebirdsql.org/en/initial-developer-s-public-license-version-1-0/[Initial Developer's Public License Version 1.0] (IDPL), a derivative of the Mozilla Public License 1.1 (MPL-1.1).
+
+SPDX-License-Identifier: LicenseRef-IDPL-1.0
 
 == Available extensions
 
@@ -10,10 +12,12 @@ Code in this project is licensed under the https://www.firebirdsql.org/en/initia
 ====
 These extensions haven't been published yet, so their names and coordinates are tentative.
 
-Actually usage in Firebird documentation and Jaybird manual is pending publication of these extensions.
+Actually usage in Firebird documentation and the Jaybird manual is pending publication of these extensions.
 ====
 
-These extensions are registered automatically.
+These extensions are registered automatically by AsciidoctorJ.
+
+Current versions of the extensions work with AsciidoctorJ 3.0.x.
 
 === `canonical-link`
 
@@ -50,7 +54,12 @@ This processor will add the following HTML fragment to the `<head>` element of t
 
 === `since-until-macro`
 
-Converts `++since:[Jaybird 6]++` to `++[.since]_**Since:** Jaybird 6_++` (example rendering: [.since]_**Since:** Jaybird 6_)
+Provides two macros:
+
+`++since:[<text>]++`::
+`++since:[Jaybird 6]++` converts to `++[.since]_**Since:** Jaybird 6_++` (example rendering: [.since]_**Since:** Jaybird 6_)
+`++until:[<text>]++`::
+`++until:[Jaybird 6]++` converts to `++[.until]_**Removed in:** Jaybird 6_++` (example rendering: [.until]_**Removed in:** Jaybird 6_)
 
 .Maven coordinates
 [source,xml]

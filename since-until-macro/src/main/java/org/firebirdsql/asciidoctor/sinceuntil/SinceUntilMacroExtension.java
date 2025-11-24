@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: Copyright 2025 Mark Rotteveel
+// SPDX-License-Identifier: LicenseRef-IDPL-1.0
 package org.firebirdsql.asciidoctor.sinceuntil;
 
 import org.asciidoctor.Asciidoctor;
