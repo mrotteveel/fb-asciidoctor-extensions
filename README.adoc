@@ -8,13 +8,6 @@ SPDX-License-Identifier: LicenseRef-IDPL-1.0
 
 == Available extensions
 
-[NOTE]
-====
-These extensions haven't been published yet, so their names and coordinates are tentative.
-
-Actually usage in Firebird documentation and the Jaybird manual is pending publication of these extensions.
-====
-
 These extensions are registered automatically by AsciidoctorJ.
 
 Current versions of the extensions work with AsciidoctorJ 3.0.x.
@@ -50,7 +43,7 @@ This processor will add the following HTML fragment to the `<head>` element of t
 </dependency>
 ----
 
-//(Used in: https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
+(Used in: https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
 
 === `since-until-macro`
 
@@ -71,4 +64,4 @@ Provides two macros:
 </dependency>
 ----
 
-// (Used in: https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
+ (Used in: the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
