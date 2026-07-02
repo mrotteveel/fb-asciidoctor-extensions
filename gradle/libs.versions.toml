@@ -3,7 +3,7 @@
 [versions]
 asciidoctorj = "3.0.1"
 hamcrest = "3.0"
-junit = "5.14.1"
+junit = "6.1.1"
 
 [libraries]
 org-asciidoctor-asciidoctorj = { module = "org.asciidoctor:asciidoctorj", version.ref = "asciidoctorj" }
