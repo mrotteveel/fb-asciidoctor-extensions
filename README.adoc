@@ -14,6 +14,8 @@ Current versions of the extensions work with AsciidoctorJ 3.0.x.
 
 === `canonical-link`
 
+image::https://maven-badges.sml.io/sonatype-central/org.firebirdsql.asciidoctor/canonical-link/badge.svg?subject=canonical-link[canonical-link Maven info,link=https://maven-badges.sml.io/sonatype-central/org.firebirdsql.asciidoctor/canonical-link/]
+
 Adds a canonical-link to HTML output, using the URL specified in document attribute `fb-canonical-html`.
 
 For example, for a document with:
@@ -47,6 +49,8 @@ This processor will add the following HTML fragment to the `<head>` element of t
 
 === `since-until-macro`
 
+image::https://maven-badges.sml.io/sonatype-central/org.firebirdsql.asciidoctor/since-until-macro/badge.svg?subject=since-until-macro[since-until-macro Maven info,link=https://maven-badges.sml.io/sonatype-central/org.firebirdsql.asciidoctor/since-until-macro/]
+
 Provides two macros:
 
 `++since:[<text>]++`::
@@ -67,6 +71,8 @@ Provides two macros:
 (Used in: the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
 
 === `issue-macro`
+
+image::https://maven-badges.sml.io/sonatype-central/org.firebirdsql.asciidoctor/issue-macro/badge.svg?subject=issue-macro[issue-macro Maven info,link=https://maven-badges.sml.io/sonatype-central/org.firebirdsql.asciidoctor/issue-macro/]
 
 Provides a simple macro to generate a GitHub Issues link, using the repository specified in the document attribute `fb-issue-repo`.
 
