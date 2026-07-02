@@ -1,6 +1,8 @@
 = AsciidoctorJ Extensions for Firebird Documentation
 
-This is a collection of AsciidoctorJ extensions for use in https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual].
+image::https://github.com/mrotteveel/fb-asciidoctor-extensions/actions/workflows/run-tests.yml/badge.svg?branch=main[Build Status,link=https://github.com/mrotteveel/fb-asciidoctor-extensions/actions?query=branch%3Amain+workflow%3Arun-tests]
+
+This is a collection of AsciidoctorJ extensions for use in https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], https://github.com/FirebirdSQL/jaybird[Jaybird release notes and FAQ] and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual].
 
 Code in this project is licensed under the https://www.firebirdsql.org/en/initial-developer-s-public-license-version-1-0/[Initial Developer's Public License Version 1.0] (IDPL), a derivative of the Mozilla Public License 1.1 (MPL-1.1).
 
