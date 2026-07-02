@@ -43,7 +43,7 @@ This processor will add the following HTML fragment to the `<head>` element of t
 </dependency>
 ----
 
-(Used in: https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
+(Used in: https://github.com/FirebirdSQL/firebird-documentation[Firebird documentation], https://github.com/FirebirdSQL/jaybird[Jaybird release notes and FAQ], and the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
 
 === `since-until-macro`
 
