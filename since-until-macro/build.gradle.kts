@@ -34,7 +34,7 @@ tasks.jar {
             "Automatic-Module-Name" to "org.firebirdsql.asciidoctor.sinceuntil",
             "License" to providers.gradleProperty("license.name"),
             "License-Url" to providers.gradleProperty("license.url"),
-            "SPDX-FileCopyrightText" to "Copyright 2025 Mark Rotteveel",
+            "SPDX-FileCopyrightText" to "Copyright 2025-2026 Mark Rotteveel",
             "SPDX-License-Identifier" to "LicenseRef-IDPL-1.0"
         )
     }
