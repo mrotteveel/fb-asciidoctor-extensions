@@ -18,13 +18,7 @@ Deploying
 4. To deploy to Maven use
 
     ```
-    ./gradlew publish -PcredentialsPassphrase=<credentials password>
-    ```
-    
-    For snapshots we can forego signing and generating javadoc + sources using:
-    
-    ```
-    ./gradlew publish
+    ./gradlew publish -PcentralPassword=<value>
     ```
 
 This requires the proper Sonatype credentials to be set, see also the next section.
@@ -35,10 +29,11 @@ Publishing
 To publish to Maven use
 
 ```
-gradlew clean publish -PcredentialsPassphrase=<credentials password>
+gradlew clean publish -PcentralPassword=<value>
 ```
-Where `<credentials password>` is the password used to add the credentials (see
-also below).
+
+This command will prompt for you GPG key password if it's not already cached in
+your current session.
 
 Publishing to Maven Central (non-SNAPSHOT releases) requires the following
 additional steps:
@@ -51,18 +46,19 @@ To be able to deploy, you need the following:
 a `<homedir>/.gradle/gradle.properties` with the following properties:
 
 ```
-signing.keyId=<gpg key id>
-signing.secretKeyRingFile=<path to your secring.gpg> 
+signing.gnupg.keyName=<short keyid>
 
 centralUsername=<Central Portal usertoken name>
+# Only needed if you don't want to specify -PcentralPassword=... on commandline
+centralPassword=<your Central Portal usertoken password>
 ```
 
-In addition, you need to set the following credentials
+(It's possible `signing.gnupg.keyName` also accepts long key-ids, we haven't checked.)
 
-```
-./gradlew addCredentials --key signing.password --value <your secret key password> -PcredentialsPassphrase=<credentials password> 
-./gradlew addCredentials --key centralPassword --value <your Central Portal usertoken password> -PcredentialsPassphrase=<credentials password> 
-```
+Make sure the file is only readable and writable by you (chmod 600). If the
+password contains backslashes, make sure to escape them by doubling. If the
+password contains characters not in ISO 8859-1, make sure to use a Java Unicode
+escape.
 
 See https://github.com/etiennestuder/gradle-credentials-plugin for details on
 credentials.

@@ -1,20 +1,15 @@
-// SPDX-FileCopyrightText: Copyright 2025 Mark Rotteveel
+// SPDX-FileCopyrightText: Copyright 2025-2026 Mark Rotteveel
 // SPDX-License-Identifier: LicenseRef-IDPL-1.0
-import nu.studer.gradle.credentials.domain.CredentialsContainer
 
 plugins {
     `java-library`
     `maven-publish`
     signing
-    id("nu.studer.credentials").version("3.0")
 }
 
 description = "AsciidoctorJ docinfo processor to add a canonical link to HTML output"
 
 extra["isReleaseVersion"] = !version.toString().endsWith("SNAPSHOT")
-val credentials = properties["credentials"] as CredentialsContainer
-extra["signing.password"] = credentials.forKey("signing.password")
-extra["centralPassword"] = credentials.forKey("centralPassword")
 
 dependencies {
     compileOnly(libs.org.asciidoctor.asciidoctorj)
@@ -91,6 +86,7 @@ publishing {
 }
 
 signing {
+    useGpgCmd()
     setRequired { (project.extra["isReleaseVersion"] as Boolean) && gradle.taskGraph.hasTask("publish") }
     sign(publishing.publications["maven"])
 }
