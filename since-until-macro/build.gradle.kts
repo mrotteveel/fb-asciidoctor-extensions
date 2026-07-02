@@ -76,7 +76,7 @@ publishing {
         }
         repositories {
             maven {
-                url = uri((if (extra["isReleaseVersion"] as Boolean) providers.gradleProperty("releaseRepository") else providers.gradleProperty("snapshotRepository")))
+                url = uri(providers.gradleProperty(if (extra["isReleaseVersion"] as Boolean) "releaseRepository" else "snapshotRepository"))
                 credentials {
                     username = providers.gradleProperty("centralUsername").orNull
                     password = providers.gradleProperty("centralPassword").orNull

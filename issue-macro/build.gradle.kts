@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright 2025-2026 Mark Rotteveel
+// SPDX-FileCopyrightText: Copyright 2026 Mark Rotteveel
 // SPDX-License-Identifier: LicenseRef-IDPL-1.0
 
 plugins {
@@ -7,7 +7,7 @@ plugins {
     signing
 }
 
-description = "AsciidoctorJ docinfo processor to add a canonical link to HTML output"
+description = "AsciidoctorJ issue link macro"
 
 extra["isReleaseVersion"] = !version.toString().endsWith("SNAPSHOT")
 
@@ -32,10 +32,10 @@ java {
 tasks.jar {
     manifest {
         attributes(
-            "Automatic-Module-Name" to "org.firebirdsql.asciidoctor.canonical",
+            "Automatic-Module-Name" to "org.firebirdsql.asciidoctor.issue",
             "License" to providers.gradleProperty("license.name"),
             "License-Url" to providers.gradleProperty("license.url"),
-            "SPDX-FileCopyrightText" to "Copyright 2025-2026 Mark Rotteveel",
+            "SPDX-FileCopyrightText" to "Copyright 2026 Mark Rotteveel",
             "SPDX-License-Identifier" to "LicenseRef-IDPL-1.0"
         )
     }
@@ -45,10 +45,10 @@ publishing {
     publications.create<MavenPublication>("maven") {
         from(components["java"])
         pom {
-            name = "AsciidoctorJ Extensions for Firebird Documentation: canonical-link"
-            description = "AsciidoctorJ docinfo processor to add a canonical link to HTML output"
+            name = "AsciidoctorJ Extensions for Firebird Documentation: issue-macro"
+            description = "AsciidoctorJ issue link macro"
             url = "https://github.com/mrotteveel/fb-asciidoctor-extensions"
-            inceptionYear = "2025"
+            inceptionYear = "2026"
 
             developers {
                 developer {
