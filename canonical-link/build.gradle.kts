@@ -33,8 +33,8 @@ tasks.jar {
     manifest {
         attributes(
             "Automatic-Module-Name" to "org.firebirdsql.asciidoctor.canonical",
-            "License" to properties["license.name"],
-            "License-Url" to properties["license.url"]
+            "License" to providers.gradleProperty("license.name"),
+            "License-Url" to providers.gradleProperty("license.url")
         )
     }
 }
@@ -58,8 +58,8 @@ publishing {
             }
             licenses {
                 license {
-                    name = project.properties["license.name"] as String
-                    url = project.properties["license.url"] as String
+                    name = providers.gradleProperty("license.name")
+                    url = providers.gradleProperty("license.url")
                     distribution = "repo"
                 }
             }
@@ -75,10 +75,10 @@ publishing {
         }
         repositories {
             maven {
-                url = uri((if (extra["isReleaseVersion"] as Boolean) properties["releaseRepository"] else properties["snapshotRepository"]) as String)
+                url = uri((if (extra["isReleaseVersion"] as Boolean) providers.gradleProperty("releaseRepository") else providers.gradleProperty("snapshotRepository")))
                 credentials {
-                    username = findProperty("centralUsername") as String?
-                    password = findProperty("centralPassword") as String?
+                    username = providers.gradleProperty("centralUsername").orNull
+                    password = providers.gradleProperty("centralPassword").orNull
                 }
             }
         }
