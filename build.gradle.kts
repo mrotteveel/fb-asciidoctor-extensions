@@ -7,7 +7,7 @@ allprojects {
     }
 
     group = "org.firebirdsql.asciidoctor"
-    version = "1.1-SNAPSHOT"
+    version = "1.1"
 
     tasks.withType<JavaCompile>().configureEach {
         options.encoding = "UTF-8"
