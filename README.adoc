@@ -39,7 +39,7 @@ This processor will add the following HTML fragment to the `<head>` element of t
 <dependency>
   <groupId>org.firebirdsql.asciidoctor</groupId>
   <artifactId>canonical-link</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 </dependency>
 ----
 
@@ -60,8 +60,50 @@ Provides two macros:
 <dependency>
   <groupId>org.firebirdsql.asciidoctor</groupId>
   <artifactId>since-until-macro</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
 </dependency>
 ----
 
 (Used in: the https://github.com/FirebirdSQL/jaybird-manual[Jaybird manual])
+
+=== `issue-macro`
+
+Provides a simple macro to generate a GitHub Issues link, using the repository specified in the document attribute `fb-issue-repo`.
+
+The macro is:
+
+`++issue:[<issue-number>]++`
+
+If _issue-number_ is not numeric, or `fb-issue-repo` has not been defined, the value is passed as-is.
+
+For example, for a document with:
+
+[source,asciidoc]
+----
+= title
+:fb-issue-repo: FirebirdSQL/jaybird
+
+See issue:[940].
+----
+
+It will generate the equivalent of:
+
+[source,asciidoc]
+----
+= title
+:fb-issue-repo: FirebirdSQL/jaybird
+
+See https://github.com/FirebirdSQL/jaybird/issues/940[#940].
+----
+
+.Maven coordinates
+[source,xml]
+----
+<dependency>
+  <groupId>org.firebirdsql.asciidoctor</groupId>
+  <artifactId>issue-macro</artifactId>
+  <version>1.1</version>
+</dependency>
+----
+
+(Used in: the https://github.com/FirebirdSQL/jaybird[Jaybird release notes])
